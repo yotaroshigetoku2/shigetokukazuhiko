@@ -1,0 +1,216 @@
+@charset "utf-8";
+@use "import";
+@use "mixin" as *;
+@use "variable" as *;
+
+.header {
+  display: block;
+
+  img {
+    width: 100%;
+  }
+
+  .global-nav {
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include respond-to(tb,mb) {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      li {
+        margin: 0 2rem;
+        vertical-align: middle;
+
+        a {
+          font-size: 2rem;
+          font-weight: 700;
+          vertical-align: middle;
+          color: #ffffff;
+        }
+
+        a:hover {
+          color: #9bff76;
+        }
+      }
+    }
+
+    .sns-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      a {
+        height: 100%;
+        margin: 2rem;
+        display: inline-block;
+        width: 2.9rem;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.top-inner {
+  margin-top: 0;
+}
+
+// ビジョン
+.vision {
+  .vision-about {
+    background-color: $main-color;
+    margin-bottom: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    @include respond-to(tb,mb) {
+      margin-bottom: 10vw;
+    }
+
+    p {
+      vertical-align: middle;
+      color: #ffffff;
+      text-align: center;
+      margin-top: 1.5vw;
+      margin-bottom: 1.5vw;
+      line-height: 2;
+      font-size: 2.3vw;
+      @include respond-to(tb,mb) {
+        padding: 0 3vw 0;
+        font-size: 4vw;
+      }
+    }
+
+    :first-child {
+      margin-top: 5vw;
+
+      @include respond-to(tb,mb) {
+        margin-top: 10vw;
+      }
+    }
+
+    :last-child {
+      margin-bottom: 5vw;
+
+      @include respond-to(tb,mb) {
+        margin-bottom: 10vw;
+      }
+    }
+  }
+
+  .col2 {
+    margin-top: 8rem;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    @include respond-to(tb,mb) {
+      margin-top: 10vw;
+      flex-direction: column-reverse;
+    }
+
+    .col2-inner-img {
+      @include respond-to(tb,mb) {
+        width: 100%;
+        margin-top: 5vw;
+      }
+    }
+
+    .col2-inner {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row-reverse;
+
+      @include respond-to(tb,mb) {
+        width: 100%;
+        display: block;
+      }
+
+      h3 {
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        margin-left: 3rem;
+        font-size: 3vw;
+
+        @include respond-to(tb,mb) {
+          -ms-writing-mode: tb-lr;
+          writing-mode: horizontal-tb;
+          margin-left: 0;
+          font-size: 9vw;
+          text-align: center;
+          margin-top: 0;
+        }
+      }
+      .text-block {
+        margin: 3rem auto 0;
+
+        @include respond-to(tb,mb) {
+          margin: 1vw 3vw 0;
+        }
+
+        p {
+          margin-top: 1rem;
+          line-height: 2;
+
+          @include respond-to(tb,mb) {
+            font-size: 4vw;
+          }
+        }
+      }
+    }
+  }
+
+  .second {
+    @include respond-to(tb,mb) {
+      flex-direction: column;
+    }
+  }
+}
+
+.page_top_btn {
+  position: fixed;
+  right: 3vw;
+  bottom: 3vw;
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  text-align: center;
+
+  @include tablet {
+
+  }
+
+  @include mobile {
+    position: fixed;
+    right: 5vw;
+    bottom: 5vw;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 10rem;
+
+    @include tablet {
+      width: 10vw;
+      font-size: 2vw;
+    }
+
+    @include mobile {
+      bottom: 3vw;
+      width: 15vw;
+    }
+  }
+}

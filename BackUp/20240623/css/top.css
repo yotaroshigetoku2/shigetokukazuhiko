@@ -1,0 +1,27 @@
+#page_top {
+  display: block;
+}
+#page_top img {
+  width: 100%;
+}
+
+.vision > p {
+  padding-left: 3rem;
+}
+.vision .col2-inner p {
+  margin-top: 1rem;
+  line-height: 2;
+}
+
+.page_top_btn {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  text-align: center;
+}
+.page_top_btn a {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 7rem;
+}/*# sourceMappingURL=top.css.map */

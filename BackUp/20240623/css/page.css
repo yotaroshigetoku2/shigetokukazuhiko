@@ -1,0 +1,367 @@
+@charset "UTF-8";
+.profile {
+  position: relative;
+  height: 40vw;
+  background-image: url(../images/profile_mv.jpg);
+  background-size: cover;
+  border: 1px solid transparent;
+}
+
+.policy {
+  position: relative;
+  height: 40vw;
+  background-image: url(../images/policy_mv.jpg);
+  background-size: cover;
+  border: 1px solid transparent;
+}
+
+#about p, #about ul {
+  margin-top: 1rem;
+}
+#about h4 {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+/* 経歴始め */
+#history {
+  border: none;
+  width: 100%;
+}
+#history h3 {
+  text-align: center;
+  margin-top: 3rem;
+}
+#history .nennpyo {
+  width: 100%;
+  height: 60%;
+  overflow-x: visible;
+  writing-mode: vertical-rl;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  overflow: hidden;
+}
+#history .nennpyo h3 {
+  writing-mode: horizontal-tb;
+  width: 100%;
+}
+#history .nennpyo .slides .history_img {
+  height: 50rem;
+  width: 100%;
+}
+#history .nennpyo .slides tr {
+  height: 60rem;
+}
+#history .nennpyo .slides tr th {
+  text-orientation: upright;
+}
+#history .nennpyo .slides tr th span, #history .nennpyo .slides tr td span {
+  text-combine-upright: all;
+}
+#history .nennpyo .slides tr td {
+  writing-mode: horizontal-tb;
+  word-break: break-all;
+  text-align: left;
+}
+#history .nennpyo .slides tr td:first-child {
+  text-align: center;
+}
+#history .nennpyo .slides tr td:nth-child(2) {
+  writing-mode: vertical-rl;
+  height: 100%;
+}
+#history .nennpyo .slides tr .dn {
+  display: none;
+}
+
+.nennpyo2 {
+  width: 100%;
+  height: 60%;
+  overflow-x: visible;
+  writing-mode: vertical-rl;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  overflow: hidden;
+}
+.nennpyo2 h3 {
+  writing-mode: horizontal-tb;
+  width: 100%;
+}
+.nennpyo2 .slides2 .history_img {
+  height: 50rem;
+  width: 100%;
+}
+.nennpyo2 .slides2 tr {
+  height: 60rem;
+}
+.nennpyo2 .slides2 tr th {
+  text-orientation: upright;
+}
+.nennpyo2 .slides2 tr th span, .nennpyo2 .slides2 tr td span {
+  text-combine-upright: all;
+}
+.nennpyo2 .slides2 tr td {
+  writing-mode: horizontal-tb;
+  word-break: break-all;
+  text-align: left;
+}
+.nennpyo2 .slides2 tr td:first-child {
+  text-align: center;
+}
+.nennpyo2 .slides2 tr td:nth-child(2) {
+  writing-mode: vertical-rl;
+  height: 100%;
+}
+.nennpyo2 .slides2 tr .dn {
+  display: none;
+}
+
+.history table {
+  /* overflow-x: scroll;
+  -ms-writing-mode : tb-rl;
+  writing-mode : vertical-rl; */
+}
+
+/* 経歴終わり */
+#federation .col1 .col1-inner h3 {
+  margin-top: 2rem;
+}
+#federation .col1 .col1-inner h3::before {
+  content: "";
+  width: 1rem;
+  height: 4rem;
+  margin-right: 2rem;
+  background-color: #FF6C6C;
+  display: inline-block;
+  vertical-align: -0.8rem;
+}
+#federation .col1 .col1-inner ul {
+  margin-top: 2rem;
+  text-align: left;
+}
+#federation .col1 .col1-inner ul li {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.pillar {
+  position: relative;
+}
+.pillar .pillar_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+.pillar .pillar_content .pillar_content_ditail {
+  width: 380px;
+  margin: 50px 50px 50px;
+}
+.pillar .pillar_content .pillar_content_ditail h3 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 30px;
+  color: #78BC27;
+}
+
+.pillar_content .horizontal {
+  background-color: #465343;
+  border-width: 0;
+  height: 1px;
+}
+
+.pillar_content .virtical {
+  width: 1px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: translate(-50%);
+  border-width: 0;
+  left: 50%;
+  right: 50%;
+  color: #465343;
+  background-color: #465343;
+}
+
+.pillar-btn {
+  overflow: hidden;
+  display: block;
+  background-color: #78BC27;
+  margin-top: 10px;
+  float: right;
+  text-align: center;
+  border-radius: 10px;
+  padding: 2% 5%;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+  box-shadow: 0.5rem 0.5rem 0.3rem rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+.pillar-btn:hover {
+  box-shadow: none;
+}
+
+.pillar-btn p {
+  margin-top: 0;
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+}
+
+.pillar-btn:hover {
+  background-color: rgba(120, 188, 39, 0.8);
+}
+
+.policy-detail .col3-inner {
+  margin: 1.5rem 0;
+}
+.policy-detail .col3-inner img {
+  width: 30rem;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.policy-detail .col3-inner div {
+  width: 30rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  background-color: #78BC27;
+}
+.policy-detail .col3-inner div h3, .policy-detail .col3-inner div p {
+  color: #ffffff;
+  line-height: 2;
+  font-size: 1.8rem;
+}
+.policy-detail .col3-inner div p:first-child {
+  color: #ffffff;
+  margin: 0 1.5rem 0;
+  line-height: 2;
+  font-size: 1.8rem;
+  font-size: 3rem;
+}
+
+#party-member .long_h2 {
+  text-align: center;
+}
+#party-member .long_h2 p {
+  color: #78BC27;
+  margin-top: 0;
+  font-size: 24px;
+}
+#party-member h3 {
+  margin-top: 3rem;
+}
+#party-member h3::before {
+  content: "";
+  width: 1rem;
+  height: 3.5rem;
+  margin-right: 0.1rem;
+  background-color: #FF6C6C;
+  display: inline-block;
+  vertical-align: -0.8rem;
+}
+#party-member p {
+  margin-top: 1rem;
+}
+#party-member p a {
+  padding: 0.2rem;
+  border-bottom: solid #465343 0.1rem;
+}
+#party-member p a:hover {
+  border-bottom: none;
+}
+
+#contact #contact_outline {
+  position: relative;
+}
+#contact #contact_outline .modal_bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ECF4E2;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+#contact #contact_outline .contact_col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#contact #contact_outline .contact_col .col3 {
+  align-items: stretch;
+  margin-top: 3rem;
+}
+#contact #contact_outline .contact_col .col3 p {
+  margin-top: 1rem;
+}
+#contact #contact_outline .contact_col .green_box {
+  background-color: #78BC27;
+  border-radius: 1rem;
+  padding: 3rem 1.5rem 3rem;
+  width: 28rem;
+  margin-top: 3rem;
+  position: relative;
+  height: 40rem;
+}
+#contact #contact_outline .contact_col .green_box:last-child {
+  width: 100%;
+  height: 12rem;
+  border-radius: 3rem;
+}
+#contact #contact_outline .contact_col .green_box .h3 {
+  display: flex;
+  align-items: center;
+  height: 6rem;
+}
+#contact #contact_outline .contact_col .green_box h3 {
+  line-height: 1;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
+}
+#contact #contact_outline .contact_col .green_box h3 span {
+  font-size: 16px;
+  line-height: 0.1;
+}
+#contact #contact_outline .contact_col .green_box p {
+  margin-top: 1.5rem;
+  color: #ffffff;
+}
+#contact #contact_outline .contact_col .green_box h3, #contact #contact_outline .contact_col .green_box h4, #contact #contact_outline .contact_col .green_box li {
+  color: #ffffff;
+}
+#contact #contact_outline .modal-content {
+  margin: 10rem auto;
+  width: 90rem;
+  color: #ffffff;
+  background-color: #78BC27;
+  padding: 5rem;
+  border-radius: 10px;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  left: 3rem;
+  right: 3rem;
+  bottom: 0;
+  z-index: 20;
+  display: none;
+}
+#contact #contact_outline .modal-content .modal-inner h4 {
+  color: #ffffff;
+  font-size: 2.4rem;
+  text-align: center;
+}
+#contact #contact_outline .modal-content .modal-inner p {
+  color: #ffffff;
+}
+#contact #contact_outline .modal-content .modal-inner .form_btn {
+  position: static !important;
+}/*# sourceMappingURL=page.css.map */

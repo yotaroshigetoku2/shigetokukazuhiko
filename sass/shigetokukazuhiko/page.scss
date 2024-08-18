@@ -1,0 +1,1011 @@
+@use "import";
+@use "mixin" as *;
+@use "variable" as *;
+
+.profile header {
+  position: relative;
+  height: 100vh;
+  background-image: url(../images/profile_mv.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h1 {
+    position: absolute;
+    bottom: 10vw;
+    right: 0;
+  }
+}
+
+.policy header {
+  position: relative;
+  height: 40vw;
+  background-image: url(../images/policy_mv.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.partymember header {
+  position: relative;
+  height: 40vw;
+  background-image: url(../images/header/partymember_mv.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact header,
+.contact_form header,
+.kifu_form header {
+  position: relative;
+  height: 40vw;
+  background-image: url(../images/header/contact_mv.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.access header {
+  position: relative;
+  height: auto;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  h1 {
+    background-color: transparent;
+    color: #78bc27;
+    margin: 0;
+    width: auto;
+    height: auto;
+    padding: 8vw 0 3vw;
+    display: block;
+    position: static;
+    text-align: center;
+  }
+
+  .global-nav {
+    background-color: $main-color;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.thanks header {
+  position: relative;
+  height: 40vw;
+  background-image: url(../images/header/contact_mv.jpg);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+// プロフィール始め
+#about {
+  @include respond-to(tb, mb) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .about-shigetoku {
+    position: relative;
+    left: 0;
+
+    .about-img {
+      width: 70vw;
+      height: 40vw;
+      background-image: url(../images/profile/profile_about.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .about-inner {
+      background-color: #78bc27;
+      border-radius: 3rem 0 0 3rem;
+      position: absolute;
+      right: 0vw;
+      bottom: 0;
+      width: 80%;
+      height: 30vw;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+        align-items: flex-start;
+
+      }
+
+      h2 {
+        color: #ffffff;
+        font-size: 4vw;
+        padding-left: 4vw;
+        width: 40%;
+        margin-bottom: 3vw;
+        margin-left: 0;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      .about-text {
+        display: inline-block;
+        width: 40%;
+        padding-left: 4vw;
+
+        &:last-child {
+          padding-left: 0;
+        }
+
+      p{
+        margin-top: 0.5vw;
+      }
+
+      h4 {
+        margin-top: 2rem;
+        font-size: 2vw;
+
+        @include tablet {
+          font-size: 3.5vw;
+        }
+
+        @include mobile {
+          font-size: 4.5vw;
+        }
+      }
+
+      p,
+      li,
+      h4 {
+        color: #ffffff;
+        margin: 0;
+      }
+    }
+  }
+}
+
+/* 経歴始め */
+#history {
+  border: none;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+
+  .nennpyo {
+    height: 60%;
+    margin-left: 5vw;
+    margin-top: 8vw;
+
+    h3 {
+      text-align: left;
+      width: 100%;
+    }
+
+    .slides_wraper {
+      margin-top: 2vw;
+      overflow-x: scroll;
+      display: flex;
+      flex-direction: row;
+      border-top: #78bc27 0.5rem solid;
+      border-bottom: #78bc27 0.5rem solid;
+
+      .nennpyo-box {
+        position: relative;
+        min-width: 30vw;
+        height: 30vw;
+        margin-left: 5vw;
+
+        @include mobile {
+          height: 100vw;
+          min-width: 40vw;
+        }
+
+        .period-mark {
+          display: inline-block;
+          border-radius: 0 0 100% 0;
+          width: 5vw;
+          height: 5vw;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #ff6c6c;
+          display: block;
+          overflow: hidden;
+
+          @include mobile {
+            width: 10vw;
+            height: 10vw;
+          }
+        }
+
+        p {
+          margin-top: 2rem;
+
+          @include mobile {
+            font-size: 3vw;
+          }
+        }
+
+        .period {
+          font-size: 2.4vw;
+          z-index: 100;
+          position: relative;
+          left: 1vw;
+
+          @include mobile {
+            font-size: 3.6vw;
+          }
+        }
+      }
+
+      .history_img {
+        height: 50rem;
+        width: 100%;
+      }
+    }
+  }
+}
+// .nennpyo2 {
+//   width: 100%;
+//   height: 60%;
+//   overflow-x: visible;
+//   -ms-writing-mode: tb-rl;
+//   writing-mode: vertical-rl;
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-flow: row;
+//   overflow: hidden;
+
+//   h3 {
+//     -ms-writing-mode: lr-tb;
+//     writing-mode: horizontal-tb;
+//     width: 100%;
+//   }
+
+//   .slides_wraper2 {
+//     overflow: scroll;
+
+//     .slides2 {
+//       .history_img {
+//         height: 50rem;
+//         width: 100%;
+//       }
+
+//       tr {
+//         height: 60rem;
+
+//         th {
+//           text-orientation: upright;
+//         }
+
+//         th span,
+//         td span {
+//           text-combine-upright: all;
+//         }
+
+//         td {
+//           -ms-writing-mode: lr-tb;
+//           writing-mode: horizontal-tb;
+//           word-break: break-all;
+//           text-align: left;
+//         }
+
+//         td:first-child {
+//           text-align: center;
+//         }
+
+//         td:nth-child(2) {
+//           writing-mode: vertical-rl;
+//           height: 100%;
+//         }
+
+//         .dn {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }
+
+/* 経歴終わり */
+
+// 議員連盟始め
+#federation {
+  .col1 {
+    .col1-inner {
+      h3 {
+        margin-top: 2rem;
+
+        &::before {
+          content: "";
+          width: 1rem;
+          height: 4rem;
+          margin-right: 2rem;
+          background-color: #ff6c6c;
+          display: inline-block;
+          vertical-align: -0.8rem;
+        }
+      }
+
+      ul {
+        margin-top: 2rem;
+        text-align: left;
+
+        li {
+          margin-top: 1rem;
+          text-align: left;
+
+          @include tablet {
+            margin-top: 2vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 柱始め
+.pillar {
+  position: relative;
+
+  .pillar_content {
+    width: 85vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+
+    .pillar_content_ditail {
+      padding: 3vw;
+      width: 35vw;
+      margin: 5vw 0 0;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      border: 1px solid #78bc27;
+
+      @include respond-to(tb, mb) {
+        width: 100%;
+        height: 20vw;
+        border-radius: 1rem;
+        text-align: center;
+        margin: 5vw auto 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        transition: 0.4s ease;
+        overflow: hidden;
+      }
+
+      h3 {
+        text-align: left;
+        margin: 0;
+        font-size: 2.1vw;
+        color: #78bc27;
+
+        @include respond-to(tb, mb) {
+          font-size: 4vw;
+        }
+      }
+
+      .accordion-area {
+        .pillar_content_ditail_text {
+          margin-top: 0;
+          transition: 0.4s ease;
+          padding: 3vw 0;
+        }
+
+        .pillar-btn {
+          height: 4rem;
+          width: 12rem;
+          background-color: #78bc27;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          border-radius: 10px;
+          text-decoration: none;
+          cursor: pointer;
+          cursor: hand;
+          box-shadow: 0.2vw 0.3vw 0.3vw rgba(0, 0, 0, 0.3);
+          transition: 0.3s;
+
+          @include respond-to(tb, mb) {
+            display: none;
+          }
+
+          a {
+            margin-top: 0;
+            color: #ffffff;
+            display: block;
+            text-decoration: none;
+            font-size: 1.6rem;
+
+            @include respond-to(tb, mb) {
+              font-size: 3vw;
+              margin: 1.3vw auto;
+            }
+
+            a {
+              transform: all 3s;
+            }
+          }
+
+          &:hover {
+            background-color: rgba(120, 188, 39, 0.8);
+          }
+        }
+      }
+
+      .show-more {
+        @include respond-to(mb, tb) {
+          border-radius: 50%;
+          width: 7vw;
+          height: 7vw;
+          border: solid #78bc27 3px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        span {
+          @include respond-to(mb, tb) {
+            width: 5vw;
+            height: 3px;
+            background-color: #78bc27;
+            border-radius: 3px;
+            transition: 0.4s ease;
+          }
+
+          &:first-child {
+            @include respond-to(mb, tb) {
+              transform: translateY(0.25vw) rotate(90deg);
+            }
+          }
+
+          &:last-child {
+            @include respond-to(mb, tb) {
+              transform: translateY(-0.25vw);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pillar_content .horizontal {
+  background-color: #465343;
+  border-width: 0;
+  height: 1px;
+  width: 100%;
+
+  @include respond-to(tb, mb) {
+    display: none;
+  }
+}
+
+.pillar_content .virtical {
+  width: 1px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: translate(-50%);
+  border-width: 0;
+  left: 50%;
+  right: 50%;
+  color: #465343;
+  background-color: #465343;
+
+  @include respond-to(tb, mb) {
+    display: none;
+  }
+}
+
+// 柱終わり
+
+// 政策始め
+.policy-detail {
+  .explain {
+    margin-top: 5vw;
+    display: flex;
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+
+    h3 {
+      -ms-writing-mode: tb-lr;
+      writing-mode: vertical-rl;
+      margin-top: 0;
+      color: #78bc27;
+
+      @include respond-to(tb, mb) {
+        font-size: 7vw;
+      }
+    }
+
+    div {
+      width: 80%;
+
+      .mobile {
+        @include respond-to(tb, mb) {
+          font-size: 5vw;
+          display: block;
+          padding: auto;
+        }
+      }
+    }
+  }
+
+  .col3-inner {
+    margin: 1.5vw 1.5vw;
+    @include respond-to(tb, mb) {
+      height: 75vw !important;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 15vw;
+
+      @include respond-to(tb, mb) {
+        width: 100%;
+        height: 55vw;
+      }
+    }
+
+    div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background-color: #78bc27;
+      height: 10vw;
+
+      @include respond-to(tb, mb) {
+        width: 100%;
+        height: 20vw;
+      }
+
+      h3,
+      p {
+        color: #ffffff;
+        line-height: 1.5;
+        font-size: 1.6vw;
+        margin-top: 0;
+        margin: 0 1.5vw;
+
+        @include respond-to(tb, mb) {
+          font-size: 4vw;
+        }
+      }
+
+      p:first-child {
+        color: #ffffff;
+        margin: 0 1.5vw 0;
+        line-height: 2;
+        font-size: 3rem;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+#modal_pop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .bg {
+    background-color: #78bc27;
+    opacity: 0.8;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+  .pop {
+    background-color: #78bc27;
+    color: #ffffff;
+    display: none;
+  }
+
+  .bg_click {
+    display: block;
+  }
+}
+// 政策終わり
+
+// 党員
+.partymember {
+  .page-header {
+    h1 {
+      @include respond-to(tb, mb) {
+        font-size: 6vw;
+      }
+    }
+  }
+}
+
+#party-member {
+  .party-member-message {
+    width: 85vw;
+    margin: 0 auto;
+    background-color: #78bc27;
+
+    p {
+      color: #ffffff;
+
+      @include mobile {
+        margin-top: 5;
+      }
+      strong {
+        font-weight: 800;
+        font-size: 5vw;
+
+        @include mobile {
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+
+  .long_h2 {
+    text-align: center;
+
+    p {
+      color: #78bc27;
+      margin-top: 0;
+      margin-left: 9em;
+      font-size: 2vw;
+
+      @include mobile {
+        font-size: 3vw;
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 3rem;
+
+    &::before {
+      content: "";
+      width: 1rem;
+      height: 3.5rem;
+      margin-right: 0.1rem;
+      background-color: #ff6c6c;
+      display: inline-block;
+      vertical-align: -0.8rem;
+    }
+  }
+
+  p {
+    a {
+      padding: 0.2rem;
+      border-bottom: solid #465343 0.1rem;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+  .fomr-conditions {
+    .bank-accounts {
+      margin-left: 3em;
+    }
+  }
+}
+// 党員終わり
+
+// お問い合わせ
+#contact {
+  .inner {
+    width: 85vw;
+    margin: 0 auto;
+
+    .contact-intro {
+      margin-top: 3vw;
+      margin-bottom: 3vw;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .intro-box {
+        padding: 2vw;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #78bc27;
+        border-radius: 3rem;
+
+        .contact-intro-header {
+          text-align: center;
+
+          h3 {
+            font-size: 2vw;
+            line-height: 1;
+            color: #ffffff;
+          }
+        }
+
+        .contact-intro-text {
+          margin-top: 3vw;
+
+          p {
+            color: #ffffff;
+          }
+        }
+
+        .form-btn {
+          margin-top: 3vw;
+          margin: 3vw auto 0;
+          height: 4vw;
+          width: 15vw;
+          background-color: #ffffff;
+          border-radius: 2vw;
+          box-shadow: #465343 0.5vw 0.5vw;
+          transition: all 0.3s;
+          font-size: 1.4vw;
+          font-weight: 700;
+          color: #78bc27;
+          font-family: "fot-tsukuardgothic-std", sans-serif;
+          vertical-align: middle;
+          display: inline-block;
+          text-align: center;
+          line-height: normal;
+
+          &:hover {
+            box-shadow: none;
+          }
+        }
+      }
+
+      .poster-intro {
+        .contact-intro-header {
+          span {
+            font-size: 1.2vw;
+          }
+        }
+      }
+
+      .opinions-intro {
+        margin-top: 3vw;
+        width: 100%;
+      }
+    }
+
+    .modal_bg {
+      background-color: #ffffff;
+      opacity: 0.8;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: none;
+    }
+
+    .modal-content {
+      overflow: scroll;
+    }
+
+    .green_box {
+      display: none;
+      background-color: #78bc27;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      padding: 5vw;
+      overflow: scroll;
+      border-radius: 3rem;
+      width: 85vw;
+      margin: 5vw auto;
+
+      .kifu-explain {
+        h4,
+        p,
+        li {
+          color: #ffffff;
+        }
+        h4 {
+          font-size: 2.4vw;
+          text-align: center;
+          margin-bottom: 2vw;
+        }
+
+        .form-btn {
+          text-align: center;
+        }
+      }
+    }
+
+    .form-btn {
+      margin-top: 3vw;
+      margin: 3vw auto 0;
+      height: 4vw;
+      width: 15vw;
+      background-color: #ffffff;
+      border-radius: 2vw;
+      box-shadow: #465343 0.5vw 0.5vw;
+      transition: all 0.3s;
+      font-size: 1.4vw;
+      font-weight: 700;
+      color: #78bc27;
+      font-family: "fot-tsukuardgothic-std", sans-serif;
+      vertical-align: middle;
+      display: inline-block;
+      text-align: center;
+      line-height: normal;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+// プライバシーポリシー
+.privacy-policy {
+  header {
+    height: 20vw;
+    position: relative;
+
+    .global-nav-move {
+      span {
+        @include mobile {
+          display: block;
+          background-color: #78bc27;
+          height: 0.8vw;
+          z-index: 30;
+          margin-left: 0.9vw;
+          margin-right: 0.9vw;
+          border-radius: 0.3rem;
+        }
+      }
+    }
+
+    .global-nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #78bc27;
+      width: 100%;
+      animation-name: fadeDownAnime;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      z-index: 10;
+
+      @keyframes fadeDownAnime {
+        from {
+          // opacity: 0;
+          transform: translateY(-100px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        li {
+          margin: 0 2rem;
+          vertical-align: middle;
+
+          a {
+            font-size: 2rem;
+            font-weight: 700;
+            vertical-align: middle;
+            color: #ffffff;
+          }
+
+          a:hover {
+            color: #9bff76;
+          }
+        }
+      }
+
+      .sns-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        a {
+          height: 100%;
+          margin: 2rem;
+          display: inline-block;
+          width: 2.9rem;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    h1 {
+      background-color: transparent;
+      color: #78bc27;
+      margin-top: 10vw;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      display: block;
+      width: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+
+      @include mobile {
+        font-size: 5vw;
+      }
+    }
+  }
+
+  .inner {
+    width: 90vw;
+    margin: 0 auto 3vw;
+  }
+}
+
+// アクセス
+#access {
+  .col2 {
+    justify-content: center;
+    padding: auto;
+
+    .col2-inner {
+      margin-bottom: 5vw;
+
+      iframe {
+        @include mobile {
+          display: block;
+          margin: 0 auto;
+          width: 60vw;
+          height: 40vw;
+        }
+      }
+    }
+  }
+}
+
+.thanks {
+  .inner {
+    width: 80%;
+    margin: 10vw auto 10vw;
+    text-align: center;
+
+    p {
+      font-size: 3vw;
+
+      @include mobile {
+        font-size: 5vw;
+      }
+    }
+  }
+}

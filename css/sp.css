@@ -1,0 +1,6 @@
+@media screen and (max-witdth: 767px) {
+  .global-nav {
+    display: none !important;
+    font-size: 9px;
+  }
+}

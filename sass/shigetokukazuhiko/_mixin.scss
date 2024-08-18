@@ -1,0 +1,30 @@
+$mb:428px;
+$tb:1024px;
+$tb-min:429px;
+
+@mixin mobile {
+  @media (max-width: $mb) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tb-min) and (max-width: $tb) {
+    @content;
+  }
+}
+
+
+@mixin respond-to($devices...) {
+  @each $device in $devices {
+    @if $device == tb {
+      @media (min-width: $tb-min) and (max-width: $tb) {
+        @content;
+      }
+    } @else if $device == mb {
+      @media (max-width: $mb) {
+        @content;
+      }
+    }
+  }
+}
